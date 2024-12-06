@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif, 'Playfair Display', serif; /* Menambahkan kedua font */
+    background-color: #3E3232;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #fff;
+    user-select: none;
+}
+
+.container {
+    background-color: #503C3C;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 500px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.quiz-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#question-container {
+    background-color: #7E6363;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+#answer-buttons {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+.btn {
+    background-color: #A87C7C;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: 'Playfair Display', serif; /* Menggunakan font Playfair Display di tombol */
+    font-weight: 600; /* Mengatur font weight untuk tombol */
+}
+
+.btn:hover {
+    background-color: #7E6363;
+}
+
+.btn.correct {
+    background-color: green;
+}
+
+.btn.wrong {
+    background-color: red;
+}
+
+.quiz-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+#next-btn {
+    background-color: #A87C7C;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.hide {
+    display: none !important; /* Pastikan .hide berfungsi untuk menyembunyikan elemen */
+}
+
+h1 {
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.question-section p {
+    font-weight: 600;
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 95%;
+        padding: 15px;
+    }
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuis Pengetahuan Umum</title>
+
+    <!-- Menyertakan link ke Google Fonts dan FontAwesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- Menyertakan file CSS eksternal -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="quiz-header">
+            <h1>
+                <i class="fas fa-brain"></i> 
+                Kuis Pengetahuan Umum
+            </h1>
+        </div>
+
+        <div class="quiz-info">
+            <div class="category-display" id="category">
+                Kategori: Belum Dimulai
+            </div>
+            <div class="score-display">
+                Skor: <span id="score">0</span>
+            </div>
+        </div>
+
+        <div id="quiz-container">
+            <div class="question-section">
+                <div id="question-container">
+                    <p id="question">Selamat datang di Kuis Pengetahuan Umum. Tekan tombol Mulai untuk memulai!</p>
+                </div>
+            </div>
+
+            <div id="answer-buttons" class="answer-section">
+                <!-- Tombol jawaban akan dihasilkan secara dinamis -->
+            </div>
+
+            <div class="quiz-controls">
+                <button id="start-btn" class="btn btn-primary">
+                    <i class="fas fa-play"></i> Mulai Kuis
+                </button>
+                <button id="next-btn" class="btn btn-secondary hide">
+                    <i class="fas fa-arrow-right"></i> Lanjut
+                </button>
+            </div>
+        </div>
+
+        <div class="quiz-footer">
+            <div class="timer-section">
+                <i class="fas fa-clock"></i>
+                Waktu: <span id="timer">00:00</span>
+            </div>
+            <div class="progress-section">
+                Pertanyaan: <span id="current-question">0</span>/<span id="total-questions">0</span>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal" class="modal hide">
+        <div class="modal-content">
+            <h2 id="modal-title">Kuis Selesai!</h2>
+            <p id="modal-message">Skor Anda:</p>
+            <div class="modal-buttons">
+                <button id="restart-btn" class="btn btn-primary">
+                    <i class="fas fa-redo"></i> Mulai Ulang
+                </button>
+                <button id="close-modal" class="btn btn-secondary">
+                    <i class="fas fa-times"></i> Tutup
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
